@@ -1,0 +1,12 @@
+[paths]
+log = /path/to/log/dir
+out = /path/to/output/dir
+
+[trueid]
+responses = /path/to/responses/dir
+papers = /path/to/text/dir
+metadata = /path/to/metadata/dir
+
+[mendeley]
+secret = mendeley_secret
+client_id = mendeley_client_id

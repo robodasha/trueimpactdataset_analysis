@@ -1,0 +1,9 @@
+configparser
+matplotlib==2.0.0
+mendeley==0.3.2
+numpy==1.11.3
+pandas==0.19.2
+git+https://github.com/robodasha/research_papers.git
+scikit-learn==0.18.1
+scipy==0.18.1
+wheel==0.29.0
