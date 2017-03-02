@@ -72,6 +72,8 @@ def analysis():
         papers_df[seminal_papers & non_empty_years].year.describe()))
     logger.info('Survey papers age stats:\n{}'.format(
         papers_df[survey_papers & non_empty_years].year.describe()))
+    logger.info('Overall age stats:\n{}'.format(
+        papers_df[non_empty_years].year.describe()))
 
     a_heights, a_bins = numpy.histogram(
         papers_df[seminal_papers & non_empty_years].year.tolist(), bins=bins)
