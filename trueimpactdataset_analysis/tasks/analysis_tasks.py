@@ -98,6 +98,8 @@ def analysis():
         papers_df[seminal_papers].citations_gs.describe()))
     logger.info('Survey papers citations stats:\n{}'.format(
         papers_df[survey_papers].citations_gs.describe()))
+    logger.info('Overal citation stats:\n{}'.format(
+        papers_df.citations_gs.describe()))
 
     # ======================================================================== #
 
@@ -143,6 +145,8 @@ def analysis():
         papers_df[seminal_papers & non_empty_readers].reader_count.describe()))
     logger.info('Mendeley survey papers reader stats:\n{}'.format(
         papers_df[survey_papers & non_empty_readers].reader_count.describe()))
+    logger.info('Mendeley reader stats overall:\n{}'.format(
+        papers_df[non_empty_readers].reader_count.describe()))
 
     # ======================================================================== #
 
@@ -153,6 +157,8 @@ def analysis():
     citations_wos_df['seminal'] = pandas.Series(papers_df.seminal)
     logger.info('WOS citations stats:\n{}'.format(
         citations_wos_df.groupby('seminal').describe()))
+    logger.info('WOS citations stats overal:\n{}'.format(
+        citations_wos_df.describe()))
 
     logger.info('Pearson correlation GS & WOS:\n{}'.format(
         scipy.stats.pearsonr(
